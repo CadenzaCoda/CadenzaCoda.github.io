@@ -12,7 +12,8 @@ The instructions are as follows (for CARLA 0.9.15):
 2. Generate a `.xodr` file from waypoints. There is a good correspondence between the arc_length track in mpclab_common to xodr files because lines and arcs happen to be the basic building blocks of road segments in OpenDriveMap. 
 3. Import xodr to Roadrunner (may be prompted to define a transformation when importing the file). Click "build scene" to convert the xodr file into actual roads in RoadRunner. 
 4. Modify elevation and banking (also, add props, modify texture, ...). 
-	- If you are using an elevation map defined by a tif file, select the road plan tool, and in the toolbar to the left of the canvas, click project roads. Then, if you want the road to bank according to the elevation, click on cross section tool, then select a point on the road, then in 2d editor, click "project cross section". **Repeat this for many points on the road until the road fits on the elevation map nicely.** 
+	- If you are using an elevation map defined by a tif file, select the road plan tool, and in the toolbar to the left of the canvas, click project roads. Then, if you want the road to bank according to the elevation, click on cross section tool, then select a point on the road, then in 2d editor, click "project cross section". **Repeat this for many points on the road until the road fits on the elevation map nicely.**
+ 	- **Alternatively**, if you just want an offroad nonplanar surface to drive on (without actual roads), after importing the elevation map, create a surface using Surface Tool, then select the surface, and check the "Sample Global Elevation" box in attributes. 
 5. Export as CARLA filmbox (drop-down menu in Files) 
 6. Move everything in the `Export` folder to the "Import" folder of a source-build version carla 
 7. Run `make import ARGS="--package=<package_name>`
