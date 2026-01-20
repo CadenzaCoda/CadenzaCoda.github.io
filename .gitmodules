@@ -1,3 +1,6 @@
 [submodule "cs280a"]
 	path = cs280a
 	url = git@github.com:CadenzaCoda/cs280a_websites.git
+[submodule "portfolio"]
+	path = portfolio
+	url = git@github.com:CadenzaCoda/shengfan-portfolio.git
